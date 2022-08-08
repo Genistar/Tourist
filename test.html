@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div{
+            width: 100%;
+        }
+        .menu-ttt > li{
+            display: inline-block;
+            border: 1px solid;
+            padding: 10px 10px;
+            cursor: pointer;
+        }
+        #dropdown{
+            display: none;
+        }
+        #dropdown.active{
+            display: block;
+        }
+    </style>
+        <script>
+            var menu = document.getElementsByClassName("menu")
+            menu.addEventListener("click",function(){
+                document.getElementsById("dropdown").classList.toggle("active")
+            });
+        </script>
+    <div>
+        <ul class="menu-ttt">
+            <li>Trung</li>
+            <li>Thanh</li>
+            <li class="menu">Trung
+                <ul id="dropdown">
+                    <li>yêu thanh</li>
+                </ul>
+            </li>
+            <li>Thanh</li>
+        </ul>
+    </div>
+</body>
+</html>
